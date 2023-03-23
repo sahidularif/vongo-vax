@@ -11,6 +11,9 @@ const user = [
 ];
 
 function vaxTrail(user) {
+    user.sort(function(a, b){
+        return a.age % 2 - b.age % 2 || a.age - b.age
+    })
     if(!user){
         throw new Error("Function parameter can't be empty! please input array of object.")
     }
